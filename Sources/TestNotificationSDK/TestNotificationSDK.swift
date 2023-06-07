@@ -54,10 +54,10 @@ public struct TestNotificationSDK {
         let token = tokenParts?.joined()
         return token ?? ""
     }
-    mutating func didRegisterForRemoteNotificationsWithDeviceToken(deviceToken: Data){
+    public mutating func didRegisterForRemoteNotificationsWithDeviceToken(deviceToken: Data){
         self.deviceToken = deviceToken
     }
-    mutating func didFailToRegisterForRemoteNotificationsWithError(error: Error){
+    public mutating func didFailToRegisterForRemoteNotificationsWithError(error: Error){
         self.failToRegisterWithError = error
     }
 }
