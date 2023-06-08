@@ -57,3 +57,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate, TestNotificationSDKProtoc
 }
 
 ```
+
+## Testing
+
+Use a text editor to create a file called test.apn, which you’ll pass to Xcode’s simctl utility. Paste in the following JSON text and save the file.
+
+```
+{
+  "aps": {
+    "alert": "Test Notification",
+    "sound": "default",
+    "link_url": ""
+  }
+}
+```
+
+Open the Terminal app and change to the directory where you saved test.apn
+
+```
+xcrun simctl push device_identifier bundle_identifier test.apn
+```
