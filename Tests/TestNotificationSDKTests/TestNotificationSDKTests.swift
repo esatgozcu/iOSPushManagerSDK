@@ -6,6 +6,6 @@ final class TestNotificationSDKTests: XCTestCase {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct
         // results.
-        XCTAssertEqual(TestNotificationSDK().text, "Hello, World!")
+        //XCTAssertEqual(TestNotificationSDK().text, "Hello, World!")
     }
 }

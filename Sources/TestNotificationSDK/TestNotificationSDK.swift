@@ -8,13 +8,13 @@ import UserNotifications
 import UIKit
 
 public protocol TestNotificationSDKProtocol {
-    func setToken(token: String)
+    func getToken(token: String)
 }
 
 public struct TestNotificationSDK {
     private(set) var deviceToken : Data?{
         didSet{
-            tokenDelegate?.setToken(token: getSubscriptionToken())
+            tokenDelegate?.getToken(token: getSubscriptionToken())
         }
     }
     private(set) var failToRegisterWithError : Error?
